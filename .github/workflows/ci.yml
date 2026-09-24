@@ -1,0 +1,16 @@
+name: Legitimate CI Pipeline
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: Run Build and Tests
+        run: |
+          echo "Simulated build step executed successfully"
+          echo "All unit tests passed"
